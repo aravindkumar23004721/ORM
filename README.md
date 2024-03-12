@@ -31,7 +31,6 @@ End the Program
 ## code to edit in 'models.py'
 ```
 
-<<<<<<< HEAD
 '''
 admin.py 
 
@@ -87,16 +86,13 @@ admin.site.register(Student,StudentAdmin)
 
 
 ```
->>>>>>> 06d3e8697c6ae1b73781c76a7c5025777b1fdb80
 
 ## OUTPUT
 ![adminoutput](https://github.com/Kishorerz/django_orm_app/assets/144451216/b15647e6-b985-463d-b534-7e5895831124)
 
 
-<<<<<<< HEAD
 ![alt text](<Screenshot 2024-03-07 201014.png>)
 =======
->>>>>>> 06d3e8697c6ae1b73781c76a7c5025777b1fdb80
 
 
 ## RESULT
