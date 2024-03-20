@@ -25,22 +25,22 @@ login with your username and password in django and select student table and the
 models.py
 from django.db import models
 from django.contrib import admin
-class libraryBook(models. Model):
-    title=models.CharField(max_length=15);
-    BookID=models.IntegerField(primary_key=True);
-    author=models.CharField(max_length=10);
-    publisher=models.CharField(max_length=8);
+class book_details(models.Model):
+    no=models.IntegerField(primary_key=True);
+    name=models.CharField(max_length=66);
+    author=models.CharField(max_length=66);
+    year=models.IntegerField();
     price=models.IntegerField();
-    pages=models.IntegerField();
-class libraryBookAdmin(admin.ModelAdmin):
-   list_display=("title","BookID","author","publisher","price","pages");
+class book_detailsAdmin(admin.ModelAdmin):
+    list_diaplay=("no","name","author","year","price");
 
 admin.py
-from django.contrib import admin 
-from .models import libraryBook,libraryBookAdmin
-admin.site.register(libraryBook,libraryBookAdmin)
+from django.contrib import admin
+from .models import book_details,book_detailsAdmin
+admin.site.register(book_details,book_detailsAdmin)
+
 ```
 ## OUTPUT
-![Screenshot 2024-03-07 201014](https://github.com/aravindkumar23004721/ORM/assets/148962674/df3eaf8a-47fc-4844-a15a-f3dd3d6bccdd)
+![Screenshot 2024-03-06 095529](https://github.com/aravindkumar23004721/ORM/assets/148962674/bbd96689-00a5-4091-b9e8-2faa64f337b5)
 ## RESULT
 Thus the program for creating a database using ORM hass been executed successfully
