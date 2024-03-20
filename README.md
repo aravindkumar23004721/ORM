@@ -21,26 +21,24 @@ and then run the program using 'python manage.py runserver [your port number]'
 ### STEP 4:
 login with your username and password in django and select student table and then add 10 students detials.
 ## PROGRAM
-models.py
 
+## OUTPUTmodels.py
 from django.db import models
 from django.contrib import admin
-class Student_DB(models. Model):
-    regno=models.IntegerField(); 
-    name=models.CharField(max_length=20); 
-    email=models.EmailField(); 
-    DoB=models.DateField();
-    cgpa=models.IntegerField();
-class Student_DBAdmin(admin.ModelAdmin):
-    list_display=("regno","name", "email", "DoB","cgpa");
+class libraryBook(models. Model):
+    title=models.CharField(max_length=15);
+    BookID=models.IntegerField(primary_key=True);
+    author=models.CharField(max_length=10);
+    publisher=models.CharField(max_length=8);
+    price=models.IntegerField();
+    pages=models.IntegerField();
+class libraryBookAdmin(admin.ModelAdmin):
+   list_display=("title","BookID","author","publisher","price","pages");
 
 admin.py
-
-from django.contrib import admin
-from .models Student_DB,Student_DBAdmin
-admin.site.register(Student_DB,Student_DBAdmin)
-## OUTPUT
-![alt text](<Screenshot 2024-03-07 201014.png>)
+from django.contrib import admin 
+from .models import libraryBook,libraryBookAdmin
+admin.site.register(libraryBook,libraryBookAdmin)
 
 ## RESULT
 Thus the program for creating a database using ORM hass been executed successfully
