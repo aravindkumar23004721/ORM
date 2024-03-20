@@ -21,8 +21,8 @@ and then run the program using 'python manage.py runserver [your port number]'
 ### STEP 4:
 login with your username and password in django and select student table and then add 10 students detials.
 ## PROGRAM
-
-## OUTPUTmodels.py
+```
+models.py
 from django.db import models
 from django.contrib import admin
 class libraryBook(models. Model):
@@ -39,6 +39,8 @@ admin.py
 from django.contrib import admin 
 from .models import libraryBook,libraryBookAdmin
 admin.site.register(libraryBook,libraryBookAdmin)
-
+```
+## OUTPUT
+![Screenshot 2024-03-07 201014](https://github.com/aravindkumar23004721/ORM/assets/148962674/df3eaf8a-47fc-4844-a15a-f3dd3d6bccdd)
 ## RESULT
 Thus the program for creating a database using ORM hass been executed successfully
