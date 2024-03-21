@@ -5,7 +5,8 @@
 To develop a Django application to store and retrieve data from a database using Object Relational Mapping(ORM).
 
 ## Entity Relationship Diagram
-![WhatsApp Image 2024-03-20 at 09 45 13_ffe691f3](https://github.com/aravindkumar23004721/ORM/assets/148962674/3cfe6daa-36a6-45b1-9c71-9e736520be3f)
+![WhatsApp Image 2024-03-21 at 21 19 31_48f00566](https://github.com/aravindkumar23004721/ORM/assets/148962674/3491a794-9816-4956-8e23-b1af0d7b201b)
+
 
 ## DESIGN STEPS
 
@@ -25,22 +26,24 @@ login with your username and password in django and select student table and the
 models.py
 from django.db import models
 from django.contrib import admin
-class book_details(models.Model):
-    no=models.IntegerField(primary_key=True);
-    name=models.CharField(max_length=66);
-    author=models.CharField(max_length=66);
-    year=models.IntegerField();
+class libraryBook(models. Model):
+    title=models.CharField(max_length=15);
+    BookID=models.IntegerField(primary_key=True);
+    author=models.CharField(max_length=10);
+    publisher=models.CharField(max_length=8);
     price=models.IntegerField();
-class book_detailsAdmin(admin.ModelAdmin):
-    list_diaplay=("no","name","author","year","price");
+    pages=models.IntegerField();
+class libraryBookAdmin(admin.ModelAdmin):
+   list_display=("title","BookID","author","publisher","price","pages");
 
 admin.py
-from django.contrib import admin
-from .models import book_details,book_detailsAdmin
-admin.site.register(book_details,book_detailsAdmin)
+from django.contrib import admin 
+from .models import libraryBook,libraryBookAdmin
+admin.site.register(libraryBook,libraryBookAdmin)
 
 ```
 ## OUTPUT
-![Screenshot 2024-03-06 095529](https://github.com/aravindkumar23004721/ORM/assets/148962674/bbd96689-00a5-4091-b9e8-2faa64f337b5)
+![WhatsApp Image 2024-03-21 at 21 19 30_539c244b](https://github.com/aravindkumar23004721/ORM/assets/148962674/4273b6ce-99d5-432e-8dc6-787e97cd9f67)
+
 ## RESULT
 Thus the program for creating a database using ORM hass been executed successfully
